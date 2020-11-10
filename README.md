@@ -46,3 +46,15 @@ http {
 4. Sign in to your account for Azure Sphere tenant.  
 5. Select a tenant and click the [Select] button.  
 6. Click product name in Product or device group name in Device Group.
+
+# About use full function
+Download master branch.
+* Change tenant
+* Create product (right click in product list area)
+* Delete product (right click in product list area)
+* Create device group (right click in product list area or device group list are)
+* Delete device group (right click in device group list are)
+* Update imagepackage file for device group (right click in device group list are)
+* Deployment for device group (right click in device group list are)
+  * Use "azsphere pkg show -f "imagepackage file path"". Show "Image ID".
+* Change device group for device (right click in device list are) 
