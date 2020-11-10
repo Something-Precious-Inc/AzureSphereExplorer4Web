@@ -47,7 +47,7 @@ http {
 5. Select a tenant and click the [Select] button.  
 6. Click product name in Product or device group name in Device Group.
 
-# About use full function
+# How to use full function
 Download master branch.
 * Change tenant
 * Create product (right click in product list area)
