@@ -2,6 +2,7 @@
 Run the AzureSphereExplorer4Web.
 Base project is [ms-identity-javascript-v2](
 https://github.com/Azure-Samples/ms-identity-javascript-v2).
+This tool is inspired by https://github.com/matsujirushi/AzureSphereExplorer
 
 # Content
 |  File name  |  Description  |
