@@ -1,0 +1,16 @@
+.d-flex li:hover {
+  background-color: #0f0;
+  transition: background-color 800ms;
+}
+
+#productList, #groupList, #deviceList, #changeDeviceList{
+	text-align: left;
+	padding-right: 2em;
+	white-space: nowrap;
+	width:350px;
+	height:300px;
+	overflow:scroll;
+	border: solid 3px gray;
+	margin: 0 auto;
+	display: inline-block;
+}
