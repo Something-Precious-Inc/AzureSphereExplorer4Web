@@ -14,3 +14,25 @@
 	margin: 0 auto;
 	display: inline-block;
 }
+
+#area{
+	padding-right: 2em;
+	width:1000px;
+	height:300px;
+	margin: 0 auto;
+	display: inline-block;
+}
+
+#productListMenu, #groupListMenu, #deviceListMenu{
+	text-align: left;
+	display:none;
+	position:fixed;
+	left:0px;
+	top:0px;
+	border:1px solid #000;
+	background-color:#fff;
+}
+
+#productListMenu li, #groupListMenu li, #deviceListMenu li{
+	cursor:pointer;
+}

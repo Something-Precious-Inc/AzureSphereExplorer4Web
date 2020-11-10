@@ -44,9 +44,23 @@
 				<ul style="list-style-type: none" id="productList" oncontextmenu="return false;">
 				</ul>
 			</div>
+			<div id="productListMenu">
+				<ul>
+					<li onclick="createProductArea()">CreateProduct</li>
+					<li onclick="deleteProductArea()">DeleteProduct</li>
+					<li onclick="createGroupArea()">CreateGroup</li>
+				</ul>
+			</div>
 			<div class="col-sm">
 				<h5>Device Group</h5>
 				<ul style="list-style-type: none" id="groupList" oncontextmenu="return false;">
+				</ul>
+			</div>
+			<div id="groupListMenu">
+				<ul>
+					<li onclick="createGroupArea()">CreateGroup</li>
+					<li onclick="deleteGroupArea()">DeleteGroup</li>
+					<li onclick="deploymentArea()">Deployment</li>
 				</ul>
 			</div>
 			<div class="col-sm">
@@ -54,7 +68,13 @@
 				<ul style="list-style-type: none" id="deviceList" oncontextmenu="return false;">
 				</ul>
 			</div>
+			<div id="deviceListMenu">
+				<ul>
+					<li onclick="changeGroupArea()">changeGroup</li>
+				</ul>
+			</div>
 		</div>
+		<div id="area"></div>
       </div>
     </div>
     </div>
@@ -85,6 +105,10 @@
     <!-- uncomment the above line and comment the line below if you would like to use the redirect flow -->
     <script type="text/javascript" src="./authPopup.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="./main.js"></script>
+	<script type="text/javascript" src="./editArea.js"></script>
 	<script type="text/javascript" src="./azurePublicAPI.js"></script>
+	<script type="text/javascript" src="./productMenu.js"></script>
+	<script type="text/javascript" src="./groupMenu.js"></script>
+	<script type="text/javascript" src="./deviceMenu.js"></script>
   </body>
 </html>

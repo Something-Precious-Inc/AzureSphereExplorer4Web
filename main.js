@@ -7,6 +7,7 @@ let gCurrProduct;
 let gGroups		= []; // in Group
 let gCurrGroup;
 let gDevices	= []; // in Device
+let gInitMenu	= false;
 let gToken;
 
 function Tenant(tenant){
@@ -87,6 +88,22 @@ async function tenantSelect() {
 
 	document.body.style.cursor='wait';
 
+	if(!gInitMenu){
+		createMenu(document.getElementById("productList"), 
+			document.getElementById('productListMenu'),
+			document.getElementById('groupListMenu'),
+			document.getElementById('deviceListMenu'));
+		createMenu(document.getElementById("groupList"), 
+			document.getElementById('groupListMenu'),
+			document.getElementById('productListMenu'),
+			document.getElementById('deviceListMenu'));
+		createMenu(document.getElementById("deviceList"), 
+			document.getElementById('deviceListMenu'),
+			document.getElementById('productListMenu'),
+			document.getElementById('groupListMenu'));
+		gInitMenu = true;
+	}
+
 	await updateProducts();
 	await updateGroups();
 	await updateDevices();
@@ -97,6 +114,24 @@ async function tenantSelect() {
 	// top group
 	selectTopGroup();
 	document.body.style.cursor='auto';
+}
+
+function createMenu(list, menu, otherMenuOne, otherMenuTwo){
+	list.addEventListener('contextmenu',function(e){
+		if(otherMenuOne.style.display == "block"){
+			otherMenuOne.style.display = "none";
+		}
+		if(otherMenuTwo.style.display == "block"){
+			otherMenuTwo.style.display = "none";
+		}
+        menu.style.left=e.clientX+"px";
+        menu.style.top=e.clientY+"px";
+		menu.style.display="block";
+	});
+    document.body.addEventListener('click',function (e){
+    // menu disable
+    	menu.style.display="none";
+    });
 }
 
 function getProducts(response) {
